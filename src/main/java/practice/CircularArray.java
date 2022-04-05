@@ -142,42 +142,6 @@ public class CircularArray<E> implements Iterable<E>{
         }
     }
 
-
-
-    // Driver code
-    public static void main(String argc[]){
-        CircularArray<Object> c = new CircularArray<>();
-        c.addAll( 'A', 'B', 'C',
-                'D', 'E', 'F' );
-
-        c.setCur(-1);
-            for(Object o:c){
-                System.out.print(o+" ");
-            }
-           // System.out.print("\n");
-
-        
-        c.get(5); //should return F
-
-        c.add('G'); //should add G to index 6
-        c.exist(6); //should print true
-        c.get(6); //should return G
-
-        c.delete(6); //should reduce size to 5
-        c.exist(6); //should print false
-
-        c.setCur(6); //should set to 0
-        c.next1(); //should print 1
-        c.getCur(); //should print 1
-
-        c.next1(); //should print 2
-        c.next1(); //should print 3
-
-        c.back(); //should print 2
-
-    }
-
-
     @Override
     public Iterator<E> iterator() {
         Iterator<E> iterator = new Iterator<E>() {

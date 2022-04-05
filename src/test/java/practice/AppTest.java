@@ -17,7 +17,6 @@ public class AppTest {
         for(Object o:c){
             System.out.print(o+" ");
         }
-        // System.out.print("\n");
 
 
         c.get(5); //should return F
@@ -30,13 +29,8 @@ public class AppTest {
         c.exist(6); //should print false
 
         c.setCur(6); //should set to 0
-        c.next1(); //should print 1
+        c.next1();
         c.getCur(); //should print 1
-
-        c.next1(); //should print 2
-        c.next1(); //should print 3
-
-        c.back(); //should print 2
 
     }
 }
